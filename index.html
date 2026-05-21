@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="The Embodied Man — Application">
-    <meta property="og:description" content="Apply for private coaching with The Embodied Man.">
-    <title>Application — The Embodied Man</title>
+
+    <!-- Primary SEO -->
+    <title>Coaching for Men in Transition | The Embodied Man</title>
+    <meta name="description" content="Private 1:1 coaching for men in the neutral zone. Integrated psychology, training, and philosophy. Diagnostic first — locate your zone in two minutes.">
+    <link rel="canonical" href="https://theembodiedman.com/coaching-landing-final.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Coaching for Men in Transition | The Embodied Man">
+    <meta property="og:description" content="Private 1:1 coaching for men in the neutral zone. Integrated psychology, training, and philosophy. Diagnostic first — locate your zone in two minutes.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is The Embodied Man coaching program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Embodied Man is private 1:1 coaching for men in significant life transitions — post-college, post-relationship, career pivot, athletic identity loss. The methodology integrates psychological, physical, and philosophical work as one system rather than three parallel tracks. Built on the Inside Out framework, which maps three layers (Behavior, Psychology, Identity), two capacities (Edge and Depth), and five zones of masculine development."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from therapy or a gym membership?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Therapy operates primarily on the psychological layer. The gym operates on the behavioral layer. Each works on one layer in isolation while the architecture beneath regenerates the old patterns. The Embodied Man works at the identity layer first — the layer that produces both psychology and behavior — which is why the integration sticks instead of regenerating into the same ceiling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is this program for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Men 27–32 in significant life transitions who have tried therapy, the gym, self-help books, and podcasts and found that none of it integrated. Typically college-educated, in tech, finance, consulting, or entrepreneurship, training semi-consistently. The Diagnostic on this page is the first fit assessment — it scores readers across five zones and names whether the program is structurally appropriate for where they currently are."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Inside Out Diagnostic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A five-question self-assessment drawn from the Inside Out framework. It scores readers across five zones of masculine development, from Zone 01 (Fully Constrained) to Zone 05 (Fully Expressed). The result names the specific architecture you are currently operating from, the trap that lives at that layer, and the developmental edge — the move that actually works from where you are. Two minutes to complete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is the program and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The program is a minimum 90-day engagement built on weekly 1:1 sessions, integrated physical programming, and structured philosophical work. The diagnostic precedes the application. The application precedes any conversation about investment or fit. The system is built for men who want a framework, not motivation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Coaching",
+      "name": "The Embodied Man — Integrated Performance Coaching",
+      "provider": {
+        "@type": "Person",
+        "name": "Chris",
+        "jobTitle": "Performance Coach"
+      },
+      "areaServed": "Worldwide (remote 1:1)",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Men 27–32 in significant life transitions"
+      },
+      "description": "Private 1:1 coaching integrating psychological, physical, and philosophical development. 90-day minimum engagement. Built on the Inside Out framework."
+    }
+    </script>
 
     <style>
         /* ========================================
@@ -20,8 +105,6 @@
             --color-accent-dark: #9A7E2F;
             --color-border: #2A2A2A;
             --color-hover: rgba(201, 168, 76, 0.1);
-            --color-success: #4CAF50;
-            --color-error: #F44336;
 
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -31,8 +114,10 @@
             --spacing-md: 2rem;
             --spacing-lg: 4rem;
             --spacing-xl: 6rem;
+            --spacing-2xl: 8rem;
 
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --animation-duration: 0.8s;
         }
 
         /* ========================================
@@ -58,15 +143,16 @@
             font-weight: 400;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-serif);
             font-weight: 400;
             line-height: 1.2;
         }
 
-        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
-        h3 { font-size: 1.25rem; }
+        h1 { font-size: clamp(2.5rem, 7vw, 5.5rem); }
+        h2 { font-size: clamp(2rem, 5vw, 4rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+        h4 { font-size: 1.25rem; }
 
         a {
             color: var(--color-accent);
@@ -78,205 +164,988 @@
             color: var(--color-accent-dark);
         }
 
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-sans);
+            transition: var(--transition);
+        }
+
         /* ========================================
-           LAYOUT
+           BUTTON STYLES
+           ======================================== */
+
+        .btn {
+            padding: 0.875rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 0;
+            text-transform: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            border: 2px solid var(--color-accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-hover);
+            border-color: var(--color-accent-dark);
+            color: var(--color-accent-dark);
+        }
+
+        .btn-sm {
+            padding: 0.625rem 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* ========================================
+           ANIMATIONS & SCROLL EFFECTS
+           ======================================== */
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fade-left {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-up { animation: fade-up var(--animation-duration) ease-out forwards; }
+        .fade-in { animation: fade-in var(--animation-duration) ease-out forwards; }
+        .fade-left { animation: fade-left var(--animation-duration) ease-out forwards; }
+
+        /* Stagger delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        .stagger-7 { animation-delay: 0.7s; }
+        .stagger-8 { animation-delay: 0.8s; }
+
+        .in-view { opacity: 1; }
+
+        /* ========================================
+           LAYOUT & SPACING
            ======================================== */
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: var(--spacing-md);
-        }
-
-        header {
-            border-bottom: 1px solid var(--color-border);
-            padding: var(--spacing-lg) var(--spacing-md);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        header h1 {
-            margin-bottom: var(--spacing-xs);
-        }
-
-        header p {
-            color: var(--color-text-secondary);
-            font-size: 1rem;
+            padding: 0 var(--spacing-md);
         }
 
         /* ========================================
-           FORM STRUCTURE
+           SECTION SEAM — gold hairline + crosshair
+           Architectural marker between sections. Inherits the hero
+           crosshair language so it reads as recurring signature.
+           ======================================== */
+        .seam {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg) var(--spacing-md);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .seam::before,
+        .seam::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(201, 168, 76, 0.85) 50%,
+                transparent 100%
+            );
+        }
+
+        .seam-mark {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            opacity: 0.95;
+        }
+
+        .seam-mark svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--color-accent);
+            fill: none;
+            stroke-width: 1.25;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        /* ========================================
+           NAVIGATION
            ======================================== */
 
-        .form-wrapper {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-cta {
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            padding: 0.625rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--color-accent-dark);
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(135deg, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 0.9) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(201, 168, 76, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 880px;
+        }
+
+        .hero-mark {
+            display: block;
+            width: 56px;
+            height: 56px;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .hero-mark svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--color-accent);
+            fill: none;
+            stroke-width: 1.25;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.05;
+            color: var(--color-text);
+            max-width: 18ch;
+        }
+
+        .hero-content h1 em {
+            font-style: italic;
+            color: var(--color-accent);
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background-color: var(--color-accent);
+            margin: var(--spacing-md) 0 var(--spacing-lg);
+            opacity: 0.7;
+        }
+
+        .hero-subheading {
+            font-size: 1.15rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.75;
+            max-width: 620px;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+
+        /* ========================================
+           SECTION SPACING & STYLES
+           ======================================== */
+
+        section {
+            padding: var(--spacing-2xl) 0;
+            position: relative;
+        }
+
+        section > .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-label {
+            font-family: var(--font-serif);
+            font-size: 6rem;
+            font-weight: 400;
+            opacity: 0.08;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .section-header {
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .section-header h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           PROBLEM SECTION
+           ======================================== */
+
+        .problem {
+            background-color: rgba(42, 42, 42, 0.2);
+        }
+
+        .problem-intro {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-2xl);
+        }
+
+        .problem-intro p {
+            font-size: 1.05rem;
+            color: var(--color-text-secondary);
+            line-height: 1.9;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .problem-quote {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--color-accent);
+            padding: var(--spacing-lg);
+            border-left: 3px solid var(--color-accent);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin: var(--spacing-xl) 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .data-cell {
+            padding: var(--spacing-lg) var(--spacing-md);
+            border-right: 1px solid var(--color-border);
+            text-align: left;
+        }
+
+        .data-cell:last-child {
+            border-right: none;
+        }
+
+        .data-number {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+            line-height: 1;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+
+        .data-unit {
+            font-size: 0.55em;
+            margin-left: 0.05em;
+            color: var(--color-accent-dark);
+        }
+
+        .data-label {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+            letter-spacing: 0.3px;
+        }
+
+        .transitions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .transition-card {
+            background-color: rgba(42, 42, 42, 0.4);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-lg);
+            border-radius: 2px;
+        }
+
+        .transition-card h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-accent);
+        }
+
+        .transition-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           ASSESSMENT / DIAGNOSTIC SECTION
+           ======================================== */
+
+        .assessment {
+            background-color: rgba(42, 42, 42, 0.15);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .assessment-intro {
+            max-width: 760px;
+            margin: 0 auto var(--spacing-xl);
+            text-align: center;
+        }
+
+        .assessment-intro .section-label {
+            display: block;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .assessment-intro h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .assessment-intro p {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .assessment-shell {
+            max-width: 780px;
+            margin: 0 auto;
+            background-color: rgba(13, 13, 13, 0.85);
+            border: 1px solid var(--color-border);
+            padding: clamp(1.75rem, 4vw, 3.5rem);
+            position: relative;
+        }
+
+        .assessment-progress {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .assessment-progress-step {
+            flex: 1;
+            height: 2px;
+            background-color: var(--color-border);
+            transition: var(--transition);
+        }
+
+        .assessment-progress-step.active,
+        .assessment-progress-step.complete {
+            background-color: var(--color-accent);
+        }
+
+        .assessment-step {
+            display: none;
+            animation: fadeStep 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .assessment-step.active {
+            display: block;
+        }
+
+        @keyframes fadeStep {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .assessment-question-number {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .assessment-question {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 2.6vw, 2rem);
+            line-height: 1.3;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text);
+        }
+
+        .assessment-options {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .assessment-option {
+            display: block;
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.98rem;
+            line-height: 1.55;
+            background-color: transparent;
+            text-align: left;
+            width: 100%;
+            font-family: var(--font-sans);
+        }
+
+        .assessment-option:hover {
+            border-color: var(--color-accent);
+            color: var(--color-text);
+            background-color: var(--color-hover);
+        }
+
+        .assessment-option.selected {
+            border-color: var(--color-accent);
+            color: var(--color-text);
+            background-color: var(--color-hover);
+        }
+
+        .assessment-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+            padding-top: var(--spacing-md);
+        }
+
+        .assessment-back {
+            background: none;
+            border: none;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            font-family: var(--font-sans);
+        }
+
+        .assessment-back:hover {
+            color: var(--color-accent);
+        }
+
+        .assessment-back[disabled] {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .assessment-next {
+            padding: 0.75rem 1.75rem;
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--color-accent);
+        }
+
+        .assessment-next:hover {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+        }
+
+        .assessment-next[disabled] {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background-color: transparent;
+            color: var(--color-text-secondary);
+        }
+
+        /* Email gate */
+        .assessment-gate {
+            text-align: center;
+        }
+
+        .assessment-gate h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .assessment-gate p {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .assessment-gate-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .assessment-input {
+            padding: 1rem 1.25rem;
+            background-color: rgba(13, 13, 13, 0.6);
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .assessment-input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .assessment-consent {
+            font-size: 0.82rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        /* Result reveal */
+        .assessment-result-zone {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .assessment-result-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .assessment-result-score {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .assessment-result-body {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .assessment-result-body p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .assessment-result-edge {
+            border-left: 2px solid var(--color-accent);
+            padding: 0.5rem 0 0.5rem 1.25rem;
+            margin: var(--spacing-lg) 0;
+            color: var(--color-text);
+            font-style: italic;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        .assessment-result-cta {
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        /* ========================================
+           PRICING SECTION
+           ======================================== */
+
+        .pricing {
+            background-color: transparent;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .pricing-header h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .pricing-header p {
+            font-size: 1.05rem;
+            color: var(--color-text-secondary);
             max-width: 700px;
             margin: 0 auto;
         }
 
-        .form-section {
+        .pricing-intro {
+            background-color: rgba(42, 42, 42, 0.3);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-lg);
             margin-bottom: var(--spacing-xl);
-            padding-bottom: var(--spacing-xl);
-            border-bottom: 1px solid var(--color-border);
+            border-radius: 2px;
         }
 
-        .form-section:last-of-type {
+        .pricing-intro p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .pricing-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .pricing-card {
+            background-color: rgba(42, 42, 42, 0.4);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-lg);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover {
+            background-color: rgba(42, 42, 42, 0.6);
+            border-color: var(--color-accent);
+        }
+
+        .pricing-label {
+            font-size: 0.875rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pricing-amount {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        .pricing-frequency {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .pricing-description {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            color: var(--color-text-secondary);
+        }
+
+        .pricing-features li::before {
+            content: '✓ ';
+            color: var(--color-accent);
+            margin-right: 0.5rem;
+        }
+
+        .pricing-features li:last-child {
             border-bottom: none;
         }
 
-        .form-section h3 {
-            margin-bottom: var(--spacing-md);
-            color: var(--color-accent);
-        }
-
-        .form-section p {
-            color: var(--color-text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: var(--spacing-md);
-            line-height: 1.6;
-        }
-
-        /* ========================================
-           FORM FIELDS
-           ======================================== */
-
-        .form-group {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        label {
-            display: block;
-            margin-bottom: var(--spacing-sm);
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        label .required {
-            color: var(--color-accent);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="number"],
-        select,
-        textarea {
+        .pricing-cta {
             width: 100%;
-            padding: 0.875rem;
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            border: 1px solid var(--color-border);
-            background-color: rgba(255, 255, 255, 0.02);
-            color: var(--color-text);
-            transition: var(--transition);
+            margin-bottom: var(--spacing-md);
         }
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="number"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--color-accent);
-            background-color: rgba(201, 168, 76, 0.05);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* ========================================
-           CHECKBOX & RADIO
-           ======================================== */
-
-        .checkbox-group,
-        .radio-group {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
-        }
-
-        .checkbox-item,
-        .radio-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--spacing-sm);
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            margin-top: 0.3rem;
-            cursor: pointer;
-            accent-color: var(--color-accent);
-        }
-
-        .checkbox-item label,
-        .radio-item label {
-            margin-bottom: 0;
-            font-weight: 400;
-            cursor: pointer;
-        }
-
-        /* ========================================
-           BUTTON
-           ======================================== */
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            border: 1px solid var(--color-accent);
-            background-color: transparent;
-            color: var(--color-accent);
-            cursor: pointer;
-            transition: var(--transition);
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background-color: var(--color-accent);
-            color: var(--color-bg);
-        }
-
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        /* ========================================
-           VALIDATION & FEEDBACK
-           ======================================== */
-
-        .form-group.error input,
-        .form-group.error select,
-        .form-group.error textarea {
-            border-color: var(--color-error);
-        }
-
-        .error-message {
-            color: var(--color-error);
+        .pricing-note {
             font-size: 0.85rem;
-            margin-top: 0.25rem;
-            display: none;
+            color: var(--color-text-secondary);
+            text-align: center;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--color-border);
         }
 
-        .form-group.error .error-message {
-            display: block;
+        /* ========================================
+           METHODOLOGY SECTION
+           ======================================== */
+
+        .philosophy {
+            background-color: transparent;
         }
 
-        .success-message {
-            background-color: rgba(76, 175, 80, 0.1);
-            border: 1px solid var(--color-success);
-            color: var(--color-success);
-            padding: var(--spacing-md);
-            border-radius: 0;
+        .philosophy-intro {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .philosophy-intro h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .philosophy-intro p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .philosophy-pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .philosophy-pillar {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .philosophy-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            opacity: 0.15;
+        }
+
+        .philosophy-content h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+        }
+
+        .philosophy-content p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           CTA SECTION
+           ======================================== */
+
+        .cta-section {
+            text-align: center;
+            padding: var(--spacing-2xl) 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .cta-section h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            color: var(--color-text-secondary);
             margin-bottom: var(--spacing-lg);
-            display: none;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .success-message.show {
-            display: block;
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* ========================================
@@ -284,400 +1153,1221 @@
            ======================================== */
 
         footer {
-            margin-top: var(--spacing-xl);
-            padding-top: var(--spacing-lg);
-            padding-bottom: var(--spacing-lg);
+            background-color: rgba(42, 42, 42, 0.2);
             border-top: 1px solid var(--color-border);
-            text-align: center;
+            padding: var(--spacing-xl) 0;
+            margin-top: var(--spacing-2xl);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-section h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-accent);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-contact {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-contact a {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-secondary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            color: var(--color-text-secondary);
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            background-color: var(--color-hover);
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: var(--color-border);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: var(--color-text-secondary);
             font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--color-accent);
-        }
-
         /* ========================================
-           RESPONSIVE
+           RESPONSIVE DESIGN
            ======================================== */
 
-        @media (max-width: 768px) {
-            .container {
-                padding: var(--spacing-sm);
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
             }
 
-            header {
-                padding: var(--spacing-lg) var(--spacing-sm);
-                margin-bottom: var(--spacing-lg);
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                gap: var(--spacing-md);
+            }
+
+            .transitions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .data-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .data-cell {
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .data-cell:nth-child(2) {
+                border-right: none;
+            }
+
+            .data-cell:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing-lg: 2rem;
+                --spacing-xl: 3rem;
+                --spacing-2xl: 4rem;
+            }
+
+            .container {
+                padding: 0 var(--spacing-md);
             }
 
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
+
+            nav {
+                padding: 0.75rem 0;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                text-align: center;
+                width: 100%;
+            }
+
+            .hero {
+                margin-top: 120px;
+            }
+
+            .hero-meta {
+                font-size: 0.75rem;
+                gap: var(--spacing-sm);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--spacing-md);
+                text-align: center;
+            }
         }
 
         @media (max-width: 480px) {
-            h1 { font-size: 1.75rem; }
+            :root {
+                --spacing-md: 1.5rem;
+                --spacing-lg: 1.5rem;
+                --spacing-xl: 2rem;
+                --spacing-2xl: 2.5rem;
+            }
+
+            h1 { font-size: 1.5rem; }
             h2 { font-size: 1.25rem; }
 
             .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .nav-brand {
+                font-size: 1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
                 width: 100%;
+            }
+
+            .hero-ctas a {
+                width: 100%;
+            }
+
+            .section-label {
+                font-size: 3rem;
+            }
+
+            .pricing-amount {
+                font-size: 1.75rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons a {
+                width: 100%;
+            }
+
+            .assessment-shell {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .assessment-question {
+                font-size: 1.25rem;
+            }
+
+            .assessment-controls {
+                flex-direction: row;
+                gap: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- ====================================
+         NAVIGATION
+         ==================================== -->
+    <nav>
         <div class="container">
-            <h1>The Embodied Man</h1>
-            <p>Apply for private coaching</p>
+            <div class="nav-brand">The Embodied Man</div>
+            <ul class="nav-links">
+                <li><a href="#philosophy">Methodology</a></li>
+                <li><a href="#authority">About</a></li>
+                <li><a href="#assessment" class="nav-cta btn btn-primary">Take the Diagnostic</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <div class="form-wrapper">
-            <!-- INTRO SECTION -->
-            <section class="form-section">
-                <h3>About This Application</h3>
-                <p>
-                    [YOUR INTRO COPY HERE: Explain what this application is, why you ask these questions, what happens next if selected. Set expectations for response time. Keep tone welcoming but serious.]
-                </p>
-            </section>
+    <!-- ====================================
+         HERO SECTION
+         ==================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-up">
+                <div class="hero-mark" aria-hidden="true">
+                    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="28" cy="28" r="26" />
+                        <line x1="28" y1="6" x2="28" y2="50" />
+                        <line x1="6" y1="28" x2="50" y2="28" />
+                    </svg>
+                </div>
+                <div class="hero-eyebrow">The Embodied Man</div>
+                <h1>You don't have a <em>performance</em> problem.<br>You have an <em>identity</em> problem.</h1>
+                <div class="hero-divider" aria-hidden="true"></div>
+                <p class="hero-subheading fade-up stagger-1">You've optimized the surface. The training, the routines, the systems. The architecture beneath them hasn't moved — which is why the gains keep regenerating into the same ceiling. This is private coaching for men in the space between who you were and who you are becoming. Built on the Inside Out framework. Diagnostic first. Application after.</p>
+                <div class="hero-meta fade-up stagger-2">
+                    <span>Built on the Inside Out framework</span>
+                    <span>·</span>
+                    <span>By application</span>
+                    <span>·</span>
+                    <span>Diagnostic precedes everything</span>
+                </div>
+                <div class="hero-ctas fade-up stagger-3">
+                    <a href="#assessment" class="btn btn-primary">Take the Diagnostic →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- APPLICATION FORM -->
-            <form id="applicationForm">
-                <div class="success-message" id="successMessage">
-                    <strong>Application submitted successfully.</strong> We'll review your responses and be in touch within [X days/business days] to discuss fit and next steps.
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         PROBLEM/CONTEXT SECTION
+         ==================================== -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>What You're Actually Experiencing in the Neutral Zone</h2>
+            </div>
+            <div class="problem-intro fade-up stagger-1">
+                <p>You are working harder than people around you and producing more. The satisfaction keeps regenerating into the next thing you should be doing. The shape of the work changes; the underlying tension doesn't.</p>
+                <p>You're disciplined. The training is real, the work is real, the outputs are visible. And somewhere underneath all of it, there's a low-frequency static that won't resolve. A sense that the structure you are building is not the one you actually want.</p>
+                <p>You've noticed that the people closest to you don't quite see you. Not the managed version — the actual interior. You've also noticed that you've stopped expecting them to.</p>
+                <p>When real force is required — holding a position, competing, asserting an actual view — there is a small contraction that happens before you've decided anything. The edge softens automatically. You've watched it happen often enough to know it's a pattern.</p>
+                <p>You are intellectually past the frameworks that raised you. The body hasn't caught up.</p>
+
+                <p style="margin-top: var(--spacing-lg);">What you are experiencing is not a personal failure. It is the predictable output of an architecture — one that was installed gradually and operates below the level of conscious choice. The frameworks you were raised inside trained you to manage your most vital drives — ambition, competitive instinct, pride in genuine excellence — by rebranding them as moral hazards. The constraint doesn't disappear when you stop believing in its source. It lives in the body, in the nervous system, long after you've intellectually moved on.</p>
+
+                <p style="margin-top: var(--spacing-lg); color: var(--color-accent); font-style: italic;">And the data confirms what you already feel.</p>
+
+                <div class="data-grid fade-up stagger-2">
+                    <div class="data-cell">
+                        <div class="data-number">32<span class="data-unit">%</span></div>
+                        <div class="data-label">of young adults experience clinically diagnosable mental illness</div>
+                    </div>
+                    <div class="data-cell">
+                        <div class="data-number">58<span class="data-unit">%</span></div>
+                        <div class="data-label">report their lives lack meaning or purpose</div>
+                    </div>
+                    <div class="data-cell">
+                        <div class="data-number">80<span class="data-unit">%</span></div>
+                        <div class="data-label">of suicides are men — four times the female rate</div>
+                    </div>
+                    <div class="data-cell">
+                        <div class="data-number">55<span class="data-unit">→</span>27<span class="data-unit">%</span></div>
+                        <div class="data-label">decline in men with six or more close friends over three decades</div>
+                    </div>
                 </div>
 
-                <!-- SECTION 1: BASIC INFO -->
-                <section class="form-section">
-                    <h3>Basic Information</h3>
-                    <p>[OPTIONAL CONTEXT: Brief explanation of why you're asking these questions]</p>
-
-                    <div class="form-group">
-                        <label for="firstName">First Name <span class="required">*</span></label>
-                        <input type="text" id="firstName" name="firstName" required>
-                        <div class="error-message">First name is required</div>
+                <p style="margin-top: var(--spacing-lg);">Four transitions trigger the architecture to surface.</p>
+                <div class="transitions-grid fade-up stagger-2">
+                    <div class="transition-card">
+                        <h3>Post-College</h3>
+                        <p>The "student" identity organized life for 16+ years. Graduation removes it entirely. 75% of adults aged 25–33 report a quarter-life crisis.</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="lastName">Last Name <span class="required">*</span></label>
-                        <input type="text" id="lastName" name="lastName" required>
-                        <div class="error-message">Last name is required</div>
+                    <div class="transition-card">
+                        <h3>Post-Relationship</h3>
+                        <p>Boys are socialized away from intimate male friendships, funneling emotional support into one relationship. When it ends, the entire infrastructure collapses. Separated men under 35 have 9x greater odds of suicide.</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                        <div class="error-message">Valid email is required</div>
+                    <div class="transition-card">
+                        <h3>Career Pivot</h3>
+                        <p>53% of postgraduate workers consider their job central to their identity. When the role changes, identity becomes unmoored. The man is betwixt and between.</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                        <div class="error-message">Enter a valid phone number</div>
+                    <div class="transition-card">
+                        <h3>Athletic Retirement</h3>
+                        <p>Fewer than 2% of NCAA athletes advance professionally. 67% struggle with emotional distress post-graduation. Athletes who have lived it call it "a second instant death."</p>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="age">Age <span class="required">*</span></label>
-                        <input type="number" id="age" name="age" min="18" required>
-                        <div class="error-message">Age is required</div>
-                    </div>
-                </section>
-
-                <!-- SECTION 2: TRANSITION / CONTEXT -->
-                <section class="form-section">
-                    <h3>Your Current Situation</h3>
-                    <p>[OPTIONAL CONTEXT: Why you're asking about transitions/stage of life. Example: "We work with men navigating specific inflection points. Understanding where you are helps us assess fit."]</p>
-
-                    <div class="form-group">
-                        <label>[QUESTION 1: OPEN-ENDED ABOUT TRANSITION] <span class="required">*</span></label>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "Be specific. What's happening in your life right now?"]</p>
-                        <textarea id="transition" name="transition" required></textarea>
-                        <div class="error-message">This field is required</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>[QUESTION 2: SPECIFIC CHALLENGE / PAIN POINT] <span class="required">*</span></label>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text]</p>
-                        <textarea id="challenge" name="challenge" required></textarea>
-                        <div class="error-message">This field is required</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>[QUESTION 3: WHAT SUCCESS LOOKS LIKE] <span class="required">*</span></label>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "6 months from now, what's different?"]</p>
-                        <textarea id="success" name="success" required></textarea>
-                        <div class="error-message">This field is required</div>
-                    </div>
-                </section>
-
-                <!-- SECTION 3: COACHING / READINESS -->
-                <section class="form-section">
-                    <h3>Coaching & Readiness</h3>
-                    <p>[OPTIONAL CONTEXT: "We work with men who are committed to change. These questions help us understand your readiness."]</p>
-
-                    <div class="form-group">
-                        <label>[QUESTION: PREVIOUS COACHING / THERAPY EXPERIENCE]</label>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text]</p>
-                        <textarea id="coachingHistory" name="coachingHistory" placeholder="Have you worked with a coach or therapist before? What was that experience like?"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label>[QUESTION: WHAT ARE YOU COMMITTING TO?] <span class="required">*</span></label>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "This is about understanding your level of commitment."]</p>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="commit1" name="commitment" value="showing_up">
-                                <label for="commit1">Showing up consistently, even when it's hard</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="commit2" name="commitment" value="being_honest">
-                                <label for="commit2">Being honest about where I am, without filters</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="commit3" name="commitment" value="doing_work">
-                                <label for="commit3">Doing the work between sessions (not just talking)</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="commit4" name="commitment" value="3_6_months">
-                                <label for="commit4">Committing to at least 3-6 months of engagement</label>
-                            </div>
-                        </div>
-                        <div class="error-message">Select at least one commitment</div>
-                    </div>
-                </section>
-
-                <!-- SECTION 4: LOGISTICS -->
-                <section class="form-section">
-                    <h3>Logistics & Availability</h3>
-
-                    <div class="form-group">
-                        <label for="location">Location / Timezone <span class="required">*</span></label>
-                        <input type="text" id="location" name="location" placeholder="City, Country / Timezone (e.g., EST)" required>
-                        <div class="error-message">Location/timezone is required</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>[QUESTION: SESSION FREQUENCY PREFERENCE] <span class="required">*</span></label>
-                        <div class="radio-group">
-                            <div class="radio-item">
-                                <input type="radio" id="freq1" name="frequency" value="weekly" required>
-                                <label for="freq1">Weekly sessions</label>
-                            </div>
-                            <div class="radio-item">
-                                <input type="radio" id="freq2" name="frequency" value="biweekly" required>
-                                <label for="freq2">Bi-weekly sessions</label>
-                            </div>
-                            <div class="radio-item">
-                                <input type="radio" id="freq3" name="frequency" value="flexible" required>
-                                <label for="freq3">Flexible / case-by-case</label>
-                            </div>
-                        </div>
-                        <div class="error-message">Please select a session frequency</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="availability">Best Days/Times for Sessions (e.g., "Weekday evenings, 6-9pm EST")</label>
-                        <input type="text" id="availability" name="availability">
-                    </div>
-                </section>
-
-                <!-- SECTION 5: BUDGET -->
-                <section class="form-section">
-                    <h3>Investment</h3>
-                    <p>[YOUR COPY HERE: Explain pricing tiers, what's included, payment options, etc. Reference your landing page pricing.]</p>
-
-                    <div class="form-group">
-                        <label for="budget">Which tier interests you? <span class="required">*</span></label>
-                        <select id="budget" name="budget" required>
-                            <option value="">-- Select an option --</option>
-                            <option value="standard">Standard: £350/month (3-month minimum)</option>
-                            <option value="extended">Extended: £450/month (6-month minimum)</option>
-                            <option value="unsure">Unsure / Would like to discuss</option>
-                        </select>
-                        <div class="error-message">Please select an option</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Do you have budget questions or need to discuss payment flexibility?</label>
-                        <textarea id="budgetNotes" name="budgetNotes" placeholder="(Optional)"></textarea>
-                    </div>
-                </section>
-
-                <!-- SECTION 6: DISCOVERY / FIT -->
-                <section class="form-section">
-                    <h3>How Did You Find Us?</h3>
-
-                    <div class="form-group">
-                        <label for="source">Where did you hear about The Embodied Man? <span class="required">*</span></label>
-                        <select id="source" name="source" required>
-                            <option value="">-- Select an option --</option>
-                            <option value="youtube">YouTube</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="referral">Personal referral</option>
-                            <option value="search">Google search</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <div class="error-message">Please select an option</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sourceOther">If other, please specify:</label>
-                        <input type="text" id="sourceOther" name="sourceOther">
-                    </div>
-                </section>
-
-                <!-- SECTION 7: ANYTHING ELSE -->
-                <section class="form-section">
-                    <h3>Anything Else?</h3>
-                    <p>Additional context, questions, or anything else you'd like us to know before we review your application.</p>
-
-                    <div class="form-group">
-                        <label for="additionalContext">Additional Notes</label>
-                        <textarea id="additionalContext" name="additionalContext" placeholder="(Optional)"></textarea>
-                    </div>
-                </section>
-
-                <!-- AGREEMENT / CONSENT -->
-                <section class="form-section">
-                    <div class="form-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="agree" name="agree" required>
-                            <label for="agree">I agree to be contacted at the email/phone number provided, and I understand that this is an application for fit assessment, not a sales call. <span class="required">*</span></label>
-                        </div>
-                        <div class="error-message">You must agree to proceed</div>
-                    </div>
-
-                    <button type="submit" class="btn">Submit Application</button>
-                </section>
-            </form>
+                <p style="margin-top: var(--spacing-lg);">William Bridges named this space the <em>neutral zone</em> — the period between endings and new beginnings where psychological reorganization happens. It is simultaneously the highest-risk and the highest-potential period a man enters. The difference in outcome depends on whether there is a framework holding it.</p>
+                <p class="problem-quote fade-up stagger-3" style="margin-top: var(--spacing-lg);">The Embodied Man is that framework.</p>
+            </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         WHY EVERYTHING YOU'VE TRIED HAS FAILED
+         ==================================== -->
+    <section class="problem" id="why-failed" style="background-color: rgba(13, 13, 13, 0.6);">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>Why Therapy, the Gym, and Self-Help Haven't Integrated</h2>
+            </div>
+            <div class="problem-intro fade-up stagger-1">
+                <p>You've tried the obvious things. Each one did real work. None of them integrated.</p>
+
+                <div class="transitions-grid fade-up stagger-2" style="margin-top: var(--spacing-lg);">
+                    <div class="transition-card">
+                        <h3>Therapy</h3>
+                        <p>Therapy gave you insight. You can name the patterns. You can articulate the family-of-origin story with precision. What therapy could not do — and was never designed to do — is build the physical capacity to live differently once you understood. Insight without embodiment regenerates the same patterns in slightly more articulate language.</p>
+                    </div>
+                    <div class="transition-card">
+                        <h3>The Gym</h3>
+                        <p>The gym gave you discipline and a body that looks the part. What the gym could not do is reach the architecture underneath the behavior. You can build a high-performance physical practice on top of completely intact psychological resistance. The pattern is recognizable: stack more discipline onto something you don't fully understand, and watch it absorb the effort without yielding the result.</p>
+                    </div>
+                    <div class="transition-card">
+                        <h3>The Books</h3>
+                        <p><em>Atomic Habits. Can't Hurt Me. 12 Rules for Life.</em> Each one gave you a model. None of them gave you a man who would witness you working through it. Internal feedback alone — no matter how sophisticated — produces sophistication, not transformation.</p>
+                    </div>
+                    <div class="transition-card">
+                        <h3>The Podcasts</h3>
+                        <p>Huberman, Rogan, Peterson, Williamson. Each one named part of the architecture. None of them is a framework you can operate inside. A man can learn to observe himself more carefully without improving the accuracy of what he observes.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: var(--spacing-lg);">Each of these tools works on a single layer. Therapy reaches Layer 2, the psychology. The gym works at Layer 3, the behavior. The books and podcasts orbit Layer 1, identity, without touching it. The reason none of them integrated for you is not that they are wrong — it is that they were never designed to work together.</p>
+                <p class="problem-quote fade-up stagger-3" style="margin-top: var(--spacing-lg);">The Embodied Man is built specifically for that integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         ASSESSMENT / DIAGNOSTIC SECTION
+         ==================================== -->
+    <section class="assessment" id="assessment">
+        <div class="container">
+            <div class="assessment-intro fade-up">
+                <span class="section-label">Diagnostic</span>
+                <h2>Locate Yourself in the Architecture</h2>
+                <p>Five questions. Two minutes. Drawn from the Inside Out framework. The result names which of the five zones you are currently operating from, the specific trap that lives at that layer, and the developmental edge — the move that actually works from where you are right now. Not where you wish you were. Not where you used to be. There are no correct answers — only accurate ones.</p>
+            </div>
+
+            <div class="assessment-shell fade-up stagger-1" id="assessmentShell">
+
+                <!-- Progress bar -->
+                <div class="assessment-progress" aria-hidden="true">
+                    <div class="assessment-progress-step" data-step="1"></div>
+                    <div class="assessment-progress-step" data-step="2"></div>
+                    <div class="assessment-progress-step" data-step="3"></div>
+                    <div class="assessment-progress-step" data-step="4"></div>
+                    <div class="assessment-progress-step" data-step="5"></div>
+                    <div class="assessment-progress-step" data-step="6"></div>
+                    <div class="assessment-progress-step" data-step="7"></div>
+                </div>
+
+                <!-- Question 1 -->
+                <div class="assessment-step active" data-step="1">
+                    <div class="assessment-question-number">Question 01 of 05</div>
+                    <h3 class="assessment-question">When you think about your genuine ambition — the full expression of what you want to build and become — what arises first?</h3>
+                    <ul class="assessment-options" role="radiogroup" aria-label="Question 1">
+                        <li><button type="button" class="assessment-option" data-q="1" data-score="1" role="radio" aria-checked="false">Nothing specific. I don't think about it much.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="1" data-score="2" role="radio" aria-checked="false">A sense of what I should be doing — followed by frustration that I'm not there yet.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="1" data-score="3" role="radio" aria-checked="false">A clear picture — but also an awareness of internal resistance I can't fully explain.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="1" data-score="4" role="radio" aria-checked="false">Genuine clarity about what I want — and the beginning of real permission to pursue it.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="1" data-score="5" role="radio" aria-checked="false">Full ownership. The ambition is mine. The direction is mine. The drive runs clean.</button></li>
+                    </ul>
+                    <div class="assessment-controls">
+                        <button type="button" class="assessment-back" disabled>← Back</button>
+                        <button type="button" class="btn assessment-next" disabled>Continue →</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="assessment-step" data-step="2">
+                    <div class="assessment-question-number">Question 02 of 05</div>
+                    <h3 class="assessment-question">When you perform at a genuinely high level, how do you relate to that performance?</h3>
+                    <ul class="assessment-options" role="radiogroup" aria-label="Question 2">
+                        <li><button type="button" class="assessment-option" data-q="2" data-score="1" role="radio" aria-checked="false">I downplay it or redirect attention away from it quickly.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="2" data-score="2" role="radio" aria-checked="false">I feel good briefly, then immediately look for what I should be doing better.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="2" data-score="3" role="radio" aria-checked="false">I can acknowledge it — but there's still something that softens it internally.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="2" data-score="4" role="radio" aria-checked="false">I claim it. Some residual softening, but mostly I hold it without apology.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="2" data-score="5" role="radio" aria-checked="false">I inhabit it fully. Pride in genuine excellence feels like responsibility, not arrogance.</button></li>
+                    </ul>
+                    <div class="assessment-controls">
+                        <button type="button" class="assessment-back">← Back</button>
+                        <button type="button" class="btn assessment-next" disabled>Continue →</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="assessment-step" data-step="3">
+                    <div class="assessment-question-number">Question 03 of 05</div>
+                    <h3 class="assessment-question">When you think about the people closest to you — do they actually see you? Not a managed version, but the real interior?</h3>
+                    <ul class="assessment-options" role="radiogroup" aria-label="Question 3">
+                        <li><button type="button" class="assessment-option" data-q="3" data-score="1" role="radio" aria-checked="false">I've never thought about it. I present well. That seems like enough.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="3" data-score="2" role="radio" aria-checked="false">Probably not — but that feels like strength. I handle my own interior.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="3" data-score="3" role="radio" aria-checked="false">I'm becoming aware nobody really sees me — and questioning whether that's a gap.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="3" data-score="4" role="radio" aria-checked="false">One or two people see something close to the real thing. I'm cultivating that deliberately.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="3" data-score="5" role="radio" aria-checked="false">I have genuine depth with specific people. Witnessed and witnessing. Both.</button></li>
+                    </ul>
+                    <div class="assessment-controls">
+                        <button type="button" class="assessment-back">← Back</button>
+                        <button type="button" class="btn assessment-next" disabled>Continue →</button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="assessment-step" data-step="4">
+                    <div class="assessment-question-number">Question 04 of 05</div>
+                    <h3 class="assessment-question">When a situation calls for genuine force — holding a position, competing, asserting your actual view — what happens?</h3>
+                    <ul class="assessment-options" role="radiogroup" aria-label="Question 4">
+                        <li><button type="button" class="assessment-option" data-q="4" data-score="1" role="radio" aria-checked="false">I soften automatically. The edge contracts before I've made a decision.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="4" data-score="2" role="radio" aria-checked="false">I hold the position externally but there's internal noise — doubt, seeking approval.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="4" data-score="3" role="radio" aria-checked="false">I can do it, but I'm aware of the contraction and working to understand it.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="4" data-score="4" role="radio" aria-checked="false">The edge is mostly available. Occasional contraction in specific contexts I can identify.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="4" data-score="5" role="radio" aria-checked="false">The force is clean and available. Genuine drive that hasn't been tamed.</button></li>
+                    </ul>
+                    <div class="assessment-controls">
+                        <button type="button" class="assessment-back">← Back</button>
+                        <button type="button" class="btn assessment-next" disabled>Continue →</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="assessment-step" data-step="5">
+                    <div class="assessment-question-number">Question 05 of 05</div>
+                    <h3 class="assessment-question">Is the life you are currently building genuinely yours — or shaped primarily by what you felt was expected?</h3>
+                    <ul class="assessment-options" role="radiogroup" aria-label="Question 5">
+                        <li><button type="button" class="assessment-option" data-q="5" data-score="1" role="radio" aria-checked="false">I haven't asked the question.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="5" data-score="2" role="radio" aria-checked="false">Significant elements feel like they belong to someone else's framework.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="5" data-score="3" role="radio" aria-checked="false">Mixed. Some elements I can genuinely affirm. Others I'm beginning to be honest about.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="5" data-score="4" role="radio" aria-checked="false">Mostly genuine. A few remaining alignments to clarify.</button></li>
+                        <li><button type="button" class="assessment-option" data-q="5" data-score="5" role="radio" aria-checked="false">Fully mine. The structure of my life expresses what I actually want.</button></li>
+                    </ul>
+                    <div class="assessment-controls">
+                        <button type="button" class="assessment-back">← Back</button>
+                        <button type="button" class="btn assessment-next" disabled>See My Result →</button>
+                    </div>
+                </div>
+
+                <!-- Email gate -->
+                <div class="assessment-step assessment-gate" data-step="6">
+                    <div class="assessment-question-number">Final Step</div>
+                    <h3 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: var(--spacing-md);">Where should I send your full diagnostic?</h3>
+                    <p>Your zone, your developmental edge, and the specific work that lives at this layer for you. No spam. No daily emails. Five precise messages tied to your result — then an honest invitation to apply if the fit is real. <strong style="color: var(--color-text);">Unsubscribe in one click.</strong></p>
+                    <form class="assessment-gate-form" id="assessmentGateForm" novalidate>
+                        <input type="text" name="firstName" class="assessment-input" placeholder="First name" required autocomplete="given-name">
+                        <input type="email" name="email" class="assessment-input" placeholder="Email address" required autocomplete="email">
+                        <!-- Honeypot (anti-bot) — must remain empty -->
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Reveal My Result →</button>
+                        <p class="assessment-consent">By submitting, you agree to receive your diagnostic result and the five-part Inside Out sequence from The Embodied Man. Your name and email are processed on a legitimate-interest basis solely to deliver the content you requested. Full <a href="/privacy" style="color: var(--color-accent);">privacy policy</a>. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+
+                <!-- Result reveal -->
+                <div class="assessment-step" data-step="7">
+                    <div class="assessment-result-zone" id="resultZoneLabel">Zone — </div>
+                    <h3 class="assessment-result-title" id="resultTitle"></h3>
+                    <div class="assessment-result-score" id="resultScore"></div>
+                    <div class="assessment-result-body" id="resultBody"></div>
+                    <div class="assessment-result-edge" id="resultEdge"></div>
+                    <div class="assessment-result-cta">
+                        <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md); font-style: italic;">The deeper email sequence — five messages walking you through the specific work that lives at your zone — is being finalized. Your first message arrives within seven days. Until then, the result above is the precise map. Read it twice.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         METHODOLOGY SECTION
+         ==================================== -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="philosophy-intro fade-up">
+                <span class="section-label">Methodology</span>
+                <h2>The Architecture Beneath the Behavior</h2>
+                <p>Most coaching operates at the surface — tactics, accountability, productivity systems. This operates at the layer that produces the surface. The methodology comes from Inside Out, the framework I built across a decade of competition and integration work. It maps three layers, two capacities, and five zones.</p>
+            </div>
+
+            <!-- The Three Layers -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+                <h3 style="text-align: center; margin-bottom: var(--spacing-xl); color: var(--color-accent); font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase;">The Three Layers — The Work Map</h3>
+                <div class="philosophy-pillars fade-up stagger-1">
+                    <div class="philosophy-pillar">
+                        <div class="philosophy-icon">≣</div>
+                        <div class="philosophy-content">
+                            <h3>Layer 3 — Behavior</h3>
+                            <p>What you actually do. Most coaching starts and ends here. We don't. Surface change without architectural change regenerates the same pattern in a new costume.</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-pillar">
+                        <div class="philosophy-icon">◐</div>
+                        <div class="philosophy-content">
+                            <h3>Layer 2 — Psychology</h3>
+                            <p>The patterns, drives, and resistance that produce the behavior. Therapy reaches here. Coaching mostly doesn't. Insight at this layer is necessary — and on its own, insufficient.</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-pillar">
+                        <div class="philosophy-icon">◆</div>
+                        <div class="philosophy-content">
+                            <h3>Layer 1 — Identity</h3>
+                            <p>The architecture beneath the psychology — the foundation that quietly decides what is and isn't possible for you. Genuine change moves downward first. A shift at Layer 1 reorganizes Layer 2 and produces different behavior at Layer 3 without force. Trying to change behavior from the top down is why your gains keep regenerating into the same ceiling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Two Capacities -->
+            <div style="margin-bottom: var(--spacing-2xl);">
+                <h3 style="text-align: center; margin-bottom: var(--spacing-xl); color: var(--color-accent); font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase;">The Two Capacities — What Is Being Built</h3>
+                <div class="philosophy-pillars fade-up stagger-2">
+                    <div class="philosophy-pillar">
+                        <div class="philosophy-icon">✦</div>
+                        <div class="philosophy-content">
+                            <h3>Edge</h3>
+                            <p>The ability to cut through complexity to what is essential. To hold a position under pressure. To compete without apology. Not aggression — the presence of genuine drive that hasn't been managed away.</p>
+                        </div>
+                    </div>
+                    <div class="philosophy-pillar">
+                        <div class="philosophy-icon">◑</div>
+                        <div class="philosophy-content">
+                            <h3>Depth</h3>
+                            <p>The ability to genuinely perceive what is actually present — in yourself, in another, in a situation — before imposing your interpretation on it. To hold complexity without forcing resolution. To be genuinely moved without being destabilized.</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; max-width: 760px; margin: var(--spacing-lg) auto 0; color: var(--color-text); font-style: italic; font-family: var(--font-serif); font-size: 1.2rem; line-height: 1.6;">A man with Edge but no Depth is force without wisdom. A man with Depth but underdeveloped Edge is sensitivity without consequence. The work is both — deployed simultaneously, as the moment requires.</p>
+            </div>
+
+            <!-- The Five Zones -->
+            <div>
+                <h3 style="text-align: center; margin-bottom: var(--spacing-xl); color: var(--color-accent); font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase;">The Five Zones — Where You Currently Are</h3>
+                <p style="text-align: center; max-width: 760px; margin: 0 auto var(--spacing-lg); color: var(--color-text-secondary); line-height: 1.8;">Zone 01 → Zone 05. From Fully Constrained to Fully Expressed. Each zone names a specific architecture you are currently operating from, the trap that lives at that level, and the developmental edge that moves you forward. You will know your zone after the Diagnostic.</p>
+                <div style="text-align: center; margin-top: var(--spacing-lg);">
+                    <a href="#assessment" class="btn btn-primary">Take the Diagnostic →</a>
+                </div>
+            </div>
+
+            <p style="text-align: center; max-width: 800px; margin: var(--spacing-2xl) auto 0; color: var(--color-text); font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.6; font-style: italic;">The transformation at the end is not that you become a better version of the constrained man. It is that you become a genuine version of the man those constraints were suppressing. Edge and Depth deployed together. Excellence taken on as responsibility. Drive that runs clean.</p>
+        </div>
+    </section>
+
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         AUTHORITY — Credentials + Testimonial Briefs
+         ==================================== -->
+    <section class="philosophy" id="authority" style="background-color: rgba(42, 42, 42, 0.15); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="philosophy-intro fade-up">
+                <span class="section-label">About</span>
+                <h2>The Work Behind the Framework</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.9; margin-bottom: var(--spacing-md);">I built Inside Out across a decade of competition and integration work. I compete at the national level in CrossFit, Bodybuilding, and Powerlifting — three sports that demand different and often contradictory expressions of force. I race Hyrox. I trade markets using ICT methodology and operate a private family holding company. The framework I coach from is the one I needed when nothing I was trying integrated. It works because it had to.</p>
+                <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.9; margin-bottom: var(--spacing-lg);">Most coaching is built by men who teach what they read. This is built by a man who tested it against himself in five domains that don't tolerate self-deception. Edge and Depth are not abstractions. They are the conditions of competing without losing yourself.</p>
+                <p style="font-size: 0.95rem; color: var(--color-text-secondary); font-style: italic; padding: var(--spacing-md); border-left: 2px solid var(--color-accent); margin-top: var(--spacing-lg);">Client testimonials are being collected from the current cohort. They will be added here as they become available — leading with identity shift and integration, not body composition. No fabricated proof.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         OBJECTION HANDLING
+         ==================================== -->
+    <section class="problem" id="objections">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>What You're Already Asking</h2>
+            </div>
+            <div style="max-width: 820px; margin: 0 auto;">
+                <div class="transition-card" style="margin-bottom: var(--spacing-md);">
+                    <h3>"I've tried coaching before and it didn't work."</h3>
+                    <p>Most coaching operates at Layer 3 — behavior. If the work you did was tactics, accountability, and productivity systems, that is exactly the layer that produces the regeneration you experienced. This operates at Layer 1 first. The behavior change comes downstream — and it sticks because the architecture producing it has actually moved.</p>
+                </div>
+                <div class="transition-card" style="margin-bottom: var(--spacing-md);">
+                    <h3>"I'm not sure I'm the right fit for this."</h3>
+                    <p>Take the Diagnostic. If your result is Zone 01 or Zone 02, the work is real and the program is structured for you. If you score Zone 04 or 05, you may already be doing this work and the program might be redundant — I'll tell you that directly during the application. The Diagnostic is the fit assessment. The application is the second filter, not the first.</p>
+                </div>
+                <div class="transition-card">
+                    <h3>"I don't have time or budget for this right now."</h3>
+                    <p>Most men this program serves are already spending £250–£300 a month on fragmented work across gyms, therapy, apps, and books. The program consolidates that spend into one coherent system. The time question is real — weekly sessions are 90 minutes. If the surface work isn't getting you where you want to be, you're already paying the time cost without the integration. That said: if it isn't the season for it, it isn't. Take the Diagnostic. Sit with the result. The application is open when you're ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section seam -->
+    <div class="seam" aria-hidden="true">
+        <span class="seam-mark"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="8"/><line x1="9" y1="1" x2="9" y2="17"/><line x1="1" y1="9" x2="17" y2="9"/></svg></span>
+    </div>
+
+    <!-- ====================================
+         FINAL CTA SECTION — single CTA, matches hero
+         ==================================== -->
+    <section class="cta-section" id="final-cta">
+        <div class="container">
+            <h2>Start with the Map</h2>
+            <p>The cost of staying where you are is not dramatic. It is structural. Another year of working hard against an architecture you didn't build, producing surface results that regenerate into the same ceiling, slowly accepting that this is just what it is. It isn't. The Diagnostic is two minutes. The result is the precise map of where you are and the specific work that lives next. Start there.</p>
+            <div class="cta-buttons">
+                <a href="#assessment" class="btn btn-primary">Take the Diagnostic →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================
+         FOOTER
+         ==================================== -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 The Embodied Man. All rights reserved.</p>
-            <p><a href="/">Back to homepage</a></p>
+            <div class="footer-content fade-up">
+                <div class="footer-section">
+                    <h4>The Embodied Man</h4>
+                    <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-md); line-height: 1.8;">For men in the space between who they were and who they are becoming. Integrated coaching across Behavior, Psychology, and Identity. Built on the Inside Out framework.</p>
+                    <p style="color: var(--color-text-secondary); font-style: italic; font-size: 0.9rem;">"What gets suppressed doesn't disappear. It goes underground and operates with more power for being unacknowledged."<br>— <span style="font-style: normal;">Inside Out</span></p>
+                </div>
+                <div class="footer-section fade-up stagger-1">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#assessment">The Diagnostic</a></li>
+                        <li><a href="#philosophy">The Methodology</a></li>
+                        <li><a href="#authority">About</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/terms">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section fade-up stagger-2">
+                    <h4>Direct Access</h4>
+                    <div class="footer-contact">
+                        <a href="mailto:trainwcp@gmail.com">trainwcp@gmail.com</a>
+                    </div>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: var(--spacing-sm);">No funnels. No countdown timers. Direct conversation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom fade-up stagger-3">
+                <p>&copy; 2026 The Embodied Man. All rights reserved.</p>
+                <div style="display: flex; gap: var(--spacing-lg);">
+                    <a href="/privacy" style="color: var(--color-text-secondary);">Privacy</a>
+                    <a href="/terms" style="color: var(--color-text-secondary);">Terms</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- ====================================
+         SCROLL ANIMATIONS
+         ==================================== -->
     <script>
-        const form = document.getElementById('applicationForm');
-        const successMessage = document.getElementById('successMessage');
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-        // ========================================
-        // FORM VALIDATION
-        // ========================================
-
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-
-        function validateForm() {
-            let isValid = true;
-            const formGroups = form.querySelectorAll('.form-group');
-
-            formGroups.forEach(group => {
-                group.classList.remove('error');
-
-                const input = group.querySelector('input[required], textarea[required], select[required]');
-                if (!input) return;
-
-                const value = input.value.trim();
-
-                if (input.type === 'email') {
-                    if (!value || !validateEmail(value)) {
-                        group.classList.add('error');
-                        isValid = false;
-                    }
-                } else if (input.type === 'checkbox' && input.name === 'commitment') {
-                    const checked = form.querySelectorAll('input[name="commitment"]:checked');
-                    if (checked.length === 0) {
-                        group.classList.add('error');
-                        isValid = false;
-                    }
-                } else if (input.type === 'radio') {
-                    const checked = form.querySelector(`input[name="${input.name}"]:checked`);
-                    if (!checked) {
-                        group.classList.add('error');
-                        isValid = false;
-                    }
-                } else if (!value) {
-                    group.classList.add('error');
-                    isValid = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
                 }
             });
+        }, observerOptions);
 
-            // Agreement checkbox
-            const agreeCheckbox = form.querySelector('#agree');
-            const agreeGroup = agreeCheckbox.closest('.form-group');
-            if (!agreeCheckbox.checked) {
-                agreeGroup.classList.add('error');
-                isValid = false;
+        // Observe all fade elements
+        document.querySelectorAll('.fade-up, .fade-left, .fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Optional: Add scroll-based navbar transparency
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(13, 13, 13, 0.98)';
             } else {
-                agreeGroup.classList.remove('error');
+                nav.style.backgroundColor = 'rgba(13, 13, 13, 0.95)';
             }
-
-            return isValid;
-        }
-
-        // ========================================
-        // FORM SUBMISSION
-        // ========================================
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            if (!validateForm()) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                return;
-            }
-
-            // [TODO: INTEGRATE WITH YOUR EMAIL SERVICE OR BACKEND]
-            // Collect form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            data.submittedAt = new Date().toISOString();
-            data.commitment = Array.from(form.querySelectorAll('input[name="commitment"]:checked')).map(el => el.value);
-
-            console.log('Application Data:', data);
-
-            // [TODO: SEND TO EMAIL / API / WEBHOOK]
-            // Example: POST to your backend
-            // const response = await fetch('/api/applications', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
-
-            // Show success message
-            successMessage.classList.add('show');
-            form.reset();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // [TODO: OPTIONAL - Clear success message after delay]
-            // setTimeout(() => successMessage.classList.remove('show'), 5000);
         });
 
-        // ========================================
-        // REAL-TIME VALIDATION
-        // ========================================
+        /* ========================================
+           ASSESSMENT — Inside Out Diagnostic
+           ========================================
+           ESP CONFIGURATION
+           -----------------
+           Set the active provider below. Until configured, submissions
+           log to the console and the diagnostic still returns the result
+           (so the page is testable before wiring).
 
-        form.querySelectorAll('input[required], textarea[required], select[required]').forEach(field => {
-            field.addEventListener('blur', () => {
-                const group = field.closest('.form-group');
-                if (!group) return;
+           Supported providers: 'kit' (ConvertKit/Kit), 'activecampaign',
+           'mailerlite', 'webhook' (generic POST), or null (disabled).
 
-                const value = field.value.trim();
-                if (field.type === 'email' && value && !validateEmail(value)) {
-                    group.classList.add('error');
-                } else if (value) {
-                    group.classList.remove('error');
+           See "ESP Wiring Guide.md" for setup steps for each provider.
+           ======================================== */
+        window.EMBODIED_MAN_ESP = {
+            provider: 'kit', // 'kit' | 'activecampaign' | 'mailerlite' | 'webhook' | null
+
+            // Kit / ConvertKit — uses /v3/tags/{tag_id}/subscribe so subscribers
+            // come in as 'active' immediately (no double opt-in step).
+            // Each zone has its own tag ID — created via Kit's API and pinned here.
+            kit: {
+                apiKey: '3I3sQthUPmgKWHhTdqkSZA',
+                tagIds: {
+                    '01': '19490742', // embodied-zone-01
+                    '02': '19490743', // embodied-zone-02
+                    '03': '19490744', // embodied-zone-03
+                    '04': '19490745', // embodied-zone-04
+                    '05': '19490746'  // embodied-zone-05
                 }
+            },
+
+            // ActiveCampaign — account API URL + key
+            activecampaign: {
+                apiUrl: '', // e.g. https://YOURACCOUNT.api-us1.com
+                apiKey: '',
+                listId: '' // numeric list ID
+            },
+
+            // MailerLite — API key + group IDs (one per zone)
+            mailerlite: {
+                apiKey: '',
+                groupIds: { '01': '', '02': '', '03': '', '04': '', '05': '' }
+            },
+
+            // Generic webhook (Zapier, Make, n8n, your own endpoint)
+            webhook: {
+                url: '',
+                headers: {} // optional: { 'Authorization': 'Bearer ...' }
+            }
+        };
+
+        (function () {
+            const shell = document.getElementById('assessmentShell');
+            if (!shell) return;
+
+            const TOTAL_QUESTIONS = 5;
+            const TOTAL_STEPS = 7; // 5 questions + email gate + result
+            const answers = {};   // { 1: score, 2: score, ... }
+            let currentStep = 1;
+
+            // --- Zone mapping per Inside Out v2 (page 11 of client edition)
+            const ZONES = [
+                {
+                    range: [1.0, 1.8],
+                    zone: '01',
+                    label: 'Fully Constrained',
+                    title: 'The Invisible Cage',
+                    body: [
+                        'The constraint is currently invisible to you — experienced as normal, reasonable, adjusted. The edge has been managed so thoroughly that the limit is no longer perceptible from the inside.',
+                        'This is not a judgment. It is the most common starting point for men raised inside frameworks that treat ambition, competitive drive, and pride in genuine excellence as moral hazards. The constraint doesn\'t disappear when you stop believing in its source. It lives in the body — in the nervous system — long after you have intellectually moved on.',
+                        'The first move at this zone is not more discipline. It is naming what is here. The intellectual understanding comes first. The body follows.'
+                    ],
+                    edge: 'Developmental edge: Radical self-observation. Begin naming the constraint. The work is making the invisible visible — without rushing past it into another performance.'
+                },
+                {
+                    range: [1.9, 2.6],
+                    zone: '02',
+                    label: 'Behavioral Layer Only',
+                    title: 'Grinding at the Surface',
+                    body: [
+                        'You are moving. The discipline is real. Most men who arrive here are exhausted not from a shortage of effort — but because the effort is running against them. Outputs optimized. Inputs unchanged.',
+                        'The architecture beneath the behavior hasn\'t shifted, so gains feel temporary and the ceiling keeps regenerating. Breakthroughs followed by regression. The pattern is recognizable: stack more discipline onto resistance you don\'t fully understand, and watch it absorb the effort without yielding the result.',
+                        'The trap at this zone is believing that more discipline will solve what only deeper work can reach.'
+                    ],
+                    edge: 'Developmental edge: Move inward. The question is not "more discipline." It is what the resistance is protecting — and why.'
+                },
+                {
+                    range: [2.7, 3.4],
+                    zone: '03',
+                    label: 'Psychological Work Begun',
+                    title: 'Real Work Starting',
+                    body: [
+                        'The interior is becoming visible. Patterns are recognizable as patterns. Self-observation is developing, emotional range is expanding, suppressed drives are surfacing. This is genuine ground — not preliminary.',
+                        'A specific trap waits at this level: interpreting relational isolation as evidence of strength. A man can learn to observe himself more carefully without improving the accuracy of what he observes. Internal feedback alone is insufficient without genuine external witness.',
+                        'The work here is parallel-tracked: developing internal observation while identifying the specific people whose witness you actually trust.'
+                    ],
+                    edge: 'Developmental edge: Both internal observation and genuine external witness. Solo work past this point produces sophistication, not transformation.'
+                },
+                {
+                    range: [3.5, 4.2],
+                    zone: '04',
+                    label: 'Identity Work Accessed',
+                    title: 'Foundation Shifting',
+                    body: [
+                        'The genuine hierarchy of your drives is clarifying. Real self-direction is beginning to replace external approval. The mind knows before the deeper patterns have fully reorganized — and that gap is precisely where the remaining work lives.',
+                        'False oppositions are becoming visible: that strength and relational depth are not at odds; that drive and integration are the same project; that excellence and responsibility are one motion. Decisions are getting simpler. Edge and Depth are beginning to integrate.',
+                        'The remaining work is somatic. Extending genuine force beyond the contexts where role grants permission. Letting the body catch up to what the mind already knows.'
+                    ],
+                    edge: 'Developmental edge: Somatic integration. Extend the edge into contexts where your role does not pre-authorize it.'
+                },
+                {
+                    range: [4.3, 5.0],
+                    zone: '05',
+                    label: 'Fully Expressed',
+                    title: 'The Genuine Man',
+                    body: [
+                        'Not a better version of the constrained man. A genuine version of the man that constraint was suppressing. Presence lands without effort because it is real. Results match capacity. Drive is sovereign.',
+                        'Edge and Depth are deployed simultaneously as the moment requires. Excellence is not performed — it is taken on as responsibility. Overflow is abundant, nurturing, generative. Affirmative by default.',
+                        'The ongoing work at this zone is not arrival — it is maintenance. Drive sovereignty held through honest, ongoing self-observation. The frameworks that installed the constraint are still in the culture; staying out of them requires deliberate practice.'
+                    ],
+                    edge: 'Developmental edge: Sovereignty maintained, not assumed. The honest ongoing work is what keeps the integration real.'
+                }
+            ];
+
+            function classifyScore(avg) {
+                for (const z of ZONES) {
+                    if (avg >= z.range[0] && avg <= z.range[1]) return z;
+                }
+                // Fallback for any score that lands in a gap between published bands
+                // (shouldn't happen with integer scores across 5 questions, but defensive)
+                if (avg < ZONES[0].range[0]) return ZONES[0];
+                if (avg > ZONES[ZONES.length - 1].range[1]) return ZONES[ZONES.length - 1];
+                // In-between gap: pick the closer band by midpoint distance
+                let best = ZONES[0];
+                let bestDist = Infinity;
+                for (const z of ZONES) {
+                    const mid = (z.range[0] + z.range[1]) / 2;
+                    const d = Math.abs(avg - mid);
+                    if (d < bestDist) { bestDist = d; best = z; }
+                }
+                return best;
+            }
+
+            function computeAverage() {
+                const scores = Object.values(answers);
+                if (scores.length === 0) return 0;
+                return scores.reduce((a, b) => a + b, 0) / scores.length;
+            }
+
+            // --- Navigation
+            function showStep(n) {
+                shell.querySelectorAll('.assessment-step').forEach(el => {
+                    el.classList.toggle('active', Number(el.dataset.step) === n);
+                });
+                shell.querySelectorAll('.assessment-progress-step').forEach(el => {
+                    const s = Number(el.dataset.step);
+                    el.classList.toggle('active', s === n);
+                    el.classList.toggle('complete', s < n);
+                });
+                currentStep = n;
+
+                // Smooth scroll into view of the shell when advancing
+                if (n > 1) {
+                    shell.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            // --- Option selection
+            shell.querySelectorAll('.assessment-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const q = Number(btn.dataset.q);
+                    const score = Number(btn.dataset.score);
+                    answers[q] = score;
+
+                    // Update UI selection state for this question
+                    shell.querySelectorAll(`.assessment-option[data-q="${q}"]`).forEach(opt => {
+                        const isSelected = opt === btn;
+                        opt.classList.toggle('selected', isSelected);
+                        opt.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+                    });
+
+                    // Enable Continue button on this step
+                    const stepEl = btn.closest('.assessment-step');
+                    const nextBtn = stepEl.querySelector('.assessment-next');
+                    if (nextBtn) nextBtn.disabled = false;
+                });
             });
-        });
+
+            // --- Continue / Back buttons
+            shell.querySelectorAll('.assessment-next').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (currentStep < TOTAL_QUESTIONS) {
+                        showStep(currentStep + 1);
+                    } else if (currentStep === TOTAL_QUESTIONS) {
+                        // Move to email gate
+                        showStep(TOTAL_QUESTIONS + 1);
+                    }
+                });
+            });
+
+            shell.querySelectorAll('.assessment-back').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (currentStep > 1) {
+                        showStep(currentStep - 1);
+                    }
+                });
+            });
+
+            // --- ESP DISPATCH ROUTER ---
+            // Sends the payload to whichever provider is configured in window.EMBODIED_MAN_ESP.
+            // Returns a promise. If no provider is set, logs to console and resolves cleanly.
+            async function submitToESP(payload) {
+                const cfg = window.EMBODIED_MAN_ESP;
+                if (!cfg || !cfg.provider) {
+                    console.log('[Embodied Man] No ESP provider configured. Payload:', payload);
+                    return { ok: true, mode: 'console' };
+                }
+
+                const dispatchers = {
+                    kit: submitToKit,
+                    activecampaign: submitToActiveCampaign,
+                    mailerlite: submitToMailerLite,
+                    webhook: submitToWebhook
+                };
+
+                const dispatcher = dispatchers[cfg.provider];
+                if (!dispatcher) {
+                    console.warn('[Embodied Man] Unknown ESP provider:', cfg.provider);
+                    return { ok: false, error: 'unknown-provider' };
+                }
+
+                return dispatcher(payload, cfg[cfg.provider]);
+            }
+
+            // --- Kit (ConvertKit) ---
+            // Uses the tag-subscribe endpoint so subscribers arrive 'active' (no double opt-in).
+            // Routes by zone -> tag ID, with all custom fields populated.
+            // API: https://developers.kit.com/v3#tag-a-subscriber
+            async function submitToKit(payload, kitCfg) {
+                if (!kitCfg.apiKey) {
+                    throw new Error('Kit not configured: apiKey required');
+                }
+                if (!kitCfg.tagIds || !kitCfg.tagIds[payload.zone]) {
+                    throw new Error(`Kit not configured: no tag ID mapped for zone ${payload.zone}`);
+                }
+
+                const tagId = kitCfg.tagIds[payload.zone];
+                const url = `https://api.convertkit.com/v3/tags/${tagId}/subscribe`;
+
+                const body = {
+                    api_key: kitCfg.apiKey,
+                    email: payload.email,
+                    first_name: payload.firstName,
+                    fields: {
+                        diagnostic_score: payload.score,
+                        diagnostic_zone: payload.zone,
+                        diagnostic_zone_label: payload.zoneLabel,
+                        diagnostic_submitted_at: payload.timestamp
+                    }
+                };
+
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+
+                if (!res.ok) {
+                    const text = await res.text().catch(() => '');
+                    throw new Error(`Kit API error ${res.status}: ${text}`);
+                }
+
+                const data = await res.json();
+                // Defensive check: Kit's tag-subscribe should return state='active'.
+                // If we ever see 'inactive' here, something's misconfigured.
+                if (data.subscription && data.subscription.state && data.subscription.state !== 'active') {
+                    console.warn('[Embodied Man] Kit returned state=' + data.subscription.state + ' (expected active)');
+                }
+                return data;
+            }
+
+            // --- ActiveCampaign ---
+            // Two-step: create/update contact, then add to list with custom fields.
+            async function submitToActiveCampaign(payload, acCfg) {
+                if (!acCfg.apiUrl || !acCfg.apiKey || !acCfg.listId) {
+                    throw new Error('ActiveCampaign not configured');
+                }
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Api-Token': acCfg.apiKey
+                };
+                const contact = {
+                    contact: {
+                        email: payload.email,
+                        firstName: payload.firstName,
+                        fieldValues: [
+                            { field: 'diagnostic_zone', value: payload.zone },
+                            { field: 'diagnostic_score', value: String(payload.score) }
+                        ]
+                    }
+                };
+                const cRes = await fetch(`${acCfg.apiUrl}/api/3/contact/sync`, {
+                    method: 'POST', headers, body: JSON.stringify(contact)
+                });
+                if (!cRes.ok) throw new Error(`AC contact sync failed: ${cRes.status}`);
+                const contactData = await cRes.json();
+                const contactId = contactData.contact && contactData.contact.id;
+                if (!contactId) throw new Error('AC: no contact id returned');
+
+                const listAdd = {
+                    contactList: { list: acCfg.listId, contact: contactId, status: 1 }
+                };
+                const lRes = await fetch(`${acCfg.apiUrl}/api/3/contactLists`, {
+                    method: 'POST', headers, body: JSON.stringify(listAdd)
+                });
+                if (!lRes.ok) throw new Error(`AC list add failed: ${lRes.status}`);
+                return lRes.json();
+            }
+
+            // --- MailerLite ---
+            async function submitToMailerLite(payload, mlCfg) {
+                if (!mlCfg.apiKey) throw new Error('MailerLite not configured');
+                const groupId = mlCfg.groupIds && mlCfg.groupIds[payload.zone];
+                if (!groupId) throw new Error(`MailerLite: no group for zone ${payload.zone}`);
+
+                const res = await fetch(`https://connect.mailerlite.com/api/subscribers`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${mlCfg.apiKey}`,
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: payload.email,
+                        fields: {
+                            name: payload.firstName,
+                            diagnostic_zone: payload.zone,
+                            diagnostic_score: payload.score
+                        },
+                        groups: [groupId]
+                    })
+                });
+                if (!res.ok) throw new Error(`MailerLite error ${res.status}`);
+                return res.json();
+            }
+
+            // --- Generic webhook (Zapier / Make / n8n / custom) ---
+            async function submitToWebhook(payload, whCfg) {
+                if (!whCfg.url) throw new Error('Webhook URL not set');
+                const res = await fetch(whCfg.url, {
+                    method: 'POST',
+                    headers: Object.assign({ 'Content-Type': 'application/json' }, whCfg.headers || {}),
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error(`Webhook error ${res.status}`);
+                return res.json().catch(() => ({ ok: true }));
+            }
+
+            // --- Email gate submit
+            const gateForm = document.getElementById('assessmentGateForm');
+            if (gateForm) {
+                gateForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const data = new FormData(gateForm);
+                    const firstName = (data.get('firstName') || '').toString().trim();
+                    const email = (data.get('email') || '').toString().trim();
+                    const honeypot = (data.get('website') || '').toString().trim();
+
+                    // Honeypot — bots typically fill all fields; humans never see this one.
+                    // Silently drop the submission and pretend success to avoid signalling the trap.
+                    if (honeypot) {
+                        console.log('[Embodied Man] Honeypot tripped — submission discarded.');
+                        return;
+                    }
+
+                    if (!firstName || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+                        alert('Please enter your first name and a valid email address.');
+                        return;
+                    }
+
+                    const avg = computeAverage();
+                    const zone = classifyScore(avg);
+
+                    const payload = {
+                        firstName: firstName,
+                        email: email,
+                        score: Number(avg.toFixed(2)),
+                        zone: zone.zone,
+                        zoneLabel: zone.label,
+                        answers: answers,
+                        timestamp: new Date().toISOString(),
+                        source: 'embodied-man-landing-diagnostic'
+                    };
+
+                    // === ESP DISPATCH ===
+                    // Routes the payload to whichever provider is configured.
+                    // Always reveals the result, even if the network call fails —
+                    // we never block the user on transient ESP issues.
+                    submitToESP(payload).catch(err => {
+                        console.warn('[Embodied Man] ESP submission error (result still revealed):', err);
+                    });
+
+                    revealResult(zone, avg);
+                });
+            }
+
+            // --- Result reveal
+            function revealResult(zone, avg) {
+                document.getElementById('resultZoneLabel').textContent = `Zone ${zone.zone} — ${zone.label}`;
+                document.getElementById('resultTitle').textContent = zone.title;
+                document.getElementById('resultScore').textContent = `Score ${avg.toFixed(1)} / 5.0`;
+                const bodyEl = document.getElementById('resultBody');
+                bodyEl.innerHTML = '';
+                zone.body.forEach(p => {
+                    const para = document.createElement('p');
+                    para.textContent = p;
+                    bodyEl.appendChild(para);
+                });
+                document.getElementById('resultEdge').textContent = zone.edge;
+
+                showStep(TOTAL_STEPS);
+            }
+        })();
     </script>
 </body>
 </html>
