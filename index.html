@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="The Embodied Man — Application">
+    <meta property="og:description" content="Apply for private coaching with The Embodied Man.">
+    <title>Application — The Embodied Man</title>
+
+    <style>
+        /* ========================================
+           DESIGN SYSTEM & VARIABLES
+           ======================================== */
+
+        :root {
+            --color-bg: #0D0D0D;
+            --color-text: #F5F5F5;
+            --color-text-secondary: #A8A8A8;
+            --color-accent: #C9A84C;
+            --color-accent-dark: #9A7E2F;
+            --color-border: #2A2A2A;
+            --color-hover: rgba(201, 168, 76, 0.1);
+            --color-success: #4CAF50;
+            --color-error: #F44336;
+
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ========================================
+           GLOBAL STYLES
+           ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+        h3 { font-size: 1.25rem; }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--color-accent-dark);
+        }
+
+        /* ========================================
+           LAYOUT
+           ======================================== */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md);
+        }
+
+        header {
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--spacing-lg) var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        header h1 {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        header p {
+            color: var(--color-text-secondary);
+            font-size: 1rem;
+        }
+
+        /* ========================================
+           FORM STRUCTURE
+           ======================================== */
+
+        .form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-section {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .form-section h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-accent);
+        }
+
+        .form-section p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           FORM FIELDS
+           ======================================== */
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        label .required {
+            color: var(--color-accent);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.875rem;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            border: 1px solid var(--color-border);
+            background-color: rgba(255, 255, 255, 0.02);
+            color: var(--color-text);
+            transition: var(--transition);
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background-color: rgba(201, 168, 76, 0.05);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ========================================
+           CHECKBOX & RADIO
+           ======================================== */
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-top: 0.3rem;
+            cursor: pointer;
+            accent-color: var(--color-accent);
+        }
+
+        .checkbox-item label,
+        .radio-item label {
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        /* ========================================
+           BUTTON
+           ======================================== */
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--color-accent);
+            background-color: transparent;
+            color: var(--color-accent);
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: var(--color-accent);
+            color: var(--color-bg);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* ========================================
+           VALIDATION & FEEDBACK
+           ======================================== */
+
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: var(--color-error);
+        }
+
+        .error-message {
+            color: var(--color-error);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        .success-message {
+            background-color: rgba(76, 175, 80, 0.1);
+            border: 1px solid var(--color-success);
+            color: var(--color-success);
+            padding: var(--spacing-md);
+            border-radius: 0;
+            margin-bottom: var(--spacing-lg);
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+
+        footer {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--color-accent);
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--spacing-sm);
+            }
+
+            header {
+                padding: var(--spacing-lg) var(--spacing-sm);
+                margin-bottom: var(--spacing-lg);
+            }
+
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.25rem; }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Embodied Man</h1>
+            <p>Apply for private coaching</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <!-- INTRO SECTION -->
+            <section class="form-section">
+                <h3>About This Application</h3>
+                <p>
+                    [YOUR INTRO COPY HERE: Explain what this application is, why you ask these questions, what happens next if selected. Set expectations for response time. Keep tone welcoming but serious.]
+                </p>
+            </section>
+
+            <!-- APPLICATION FORM -->
+            <form id="applicationForm">
+                <div class="success-message" id="successMessage">
+                    <strong>Application submitted successfully.</strong> We'll review your responses and be in touch within [X days/business days] to discuss fit and next steps.
+                </div>
+
+                <!-- SECTION 1: BASIC INFO -->
+                <section class="form-section">
+                    <h3>Basic Information</h3>
+                    <p>[OPTIONAL CONTEXT: Brief explanation of why you're asking these questions]</p>
+
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <div class="error-message">First name is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message">Last name is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message">Valid email is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="error-message">Enter a valid phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age <span class="required">*</span></label>
+                        <input type="number" id="age" name="age" min="18" required>
+                        <div class="error-message">Age is required</div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: TRANSITION / CONTEXT -->
+                <section class="form-section">
+                    <h3>Your Current Situation</h3>
+                    <p>[OPTIONAL CONTEXT: Why you're asking about transitions/stage of life. Example: "We work with men navigating specific inflection points. Understanding where you are helps us assess fit."]</p>
+
+                    <div class="form-group">
+                        <label>[QUESTION 1: OPEN-ENDED ABOUT TRANSITION] <span class="required">*</span></label>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "Be specific. What's happening in your life right now?"]</p>
+                        <textarea id="transition" name="transition" required></textarea>
+                        <div class="error-message">This field is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>[QUESTION 2: SPECIFIC CHALLENGE / PAIN POINT] <span class="required">*</span></label>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text]</p>
+                        <textarea id="challenge" name="challenge" required></textarea>
+                        <div class="error-message">This field is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>[QUESTION 3: WHAT SUCCESS LOOKS LIKE] <span class="required">*</span></label>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "6 months from now, what's different?"]</p>
+                        <textarea id="success" name="success" required></textarea>
+                        <div class="error-message">This field is required</div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: COACHING / READINESS -->
+                <section class="form-section">
+                    <h3>Coaching & Readiness</h3>
+                    <p>[OPTIONAL CONTEXT: "We work with men who are committed to change. These questions help us understand your readiness."]</p>
+
+                    <div class="form-group">
+                        <label>[QUESTION: PREVIOUS COACHING / THERAPY EXPERIENCE]</label>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text]</p>
+                        <textarea id="coachingHistory" name="coachingHistory" placeholder="Have you worked with a coach or therapist before? What was that experience like?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>[QUESTION: WHAT ARE YOU COMMITTING TO?] <span class="required">*</span></label>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">[Optional helper text: "This is about understanding your level of commitment."]</p>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="commit1" name="commitment" value="showing_up">
+                                <label for="commit1">Showing up consistently, even when it's hard</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="commit2" name="commitment" value="being_honest">
+                                <label for="commit2">Being honest about where I am, without filters</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="commit3" name="commitment" value="doing_work">
+                                <label for="commit3">Doing the work between sessions (not just talking)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="commit4" name="commitment" value="3_6_months">
+                                <label for="commit4">Committing to at least 3-6 months of engagement</label>
+                            </div>
+                        </div>
+                        <div class="error-message">Select at least one commitment</div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: LOGISTICS -->
+                <section class="form-section">
+                    <h3>Logistics & Availability</h3>
+
+                    <div class="form-group">
+                        <label for="location">Location / Timezone <span class="required">*</span></label>
+                        <input type="text" id="location" name="location" placeholder="City, Country / Timezone (e.g., EST)" required>
+                        <div class="error-message">Location/timezone is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>[QUESTION: SESSION FREQUENCY PREFERENCE] <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="freq1" name="frequency" value="weekly" required>
+                                <label for="freq1">Weekly sessions</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="freq2" name="frequency" value="biweekly" required>
+                                <label for="freq2">Bi-weekly sessions</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="freq3" name="frequency" value="flexible" required>
+                                <label for="freq3">Flexible / case-by-case</label>
+                            </div>
+                        </div>
+                        <div class="error-message">Please select a session frequency</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Best Days/Times for Sessions (e.g., "Weekday evenings, 6-9pm EST")</label>
+                        <input type="text" id="availability" name="availability">
+                    </div>
+                </section>
+
+                <!-- SECTION 5: BUDGET -->
+                <section class="form-section">
+                    <h3>Investment</h3>
+                    <p>[YOUR COPY HERE: Explain pricing tiers, what's included, payment options, etc. Reference your landing page pricing.]</p>
+
+                    <div class="form-group">
+                        <label for="budget">Which tier interests you? <span class="required">*</span></label>
+                        <select id="budget" name="budget" required>
+                            <option value="">-- Select an option --</option>
+                            <option value="standard">Standard: £350/month (3-month minimum)</option>
+                            <option value="extended">Extended: £450/month (6-month minimum)</option>
+                            <option value="unsure">Unsure / Would like to discuss</option>
+                        </select>
+                        <div class="error-message">Please select an option</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you have budget questions or need to discuss payment flexibility?</label>
+                        <textarea id="budgetNotes" name="budgetNotes" placeholder="(Optional)"></textarea>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: DISCOVERY / FIT -->
+                <section class="form-section">
+                    <h3>How Did You Find Us?</h3>
+
+                    <div class="form-group">
+                        <label for="source">Where did you hear about The Embodied Man? <span class="required">*</span></label>
+                        <select id="source" name="source" required>
+                            <option value="">-- Select an option --</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="referral">Personal referral</option>
+                            <option value="search">Google search</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message">Please select an option</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sourceOther">If other, please specify:</label>
+                        <input type="text" id="sourceOther" name="sourceOther">
+                    </div>
+                </section>
+
+                <!-- SECTION 7: ANYTHING ELSE -->
+                <section class="form-section">
+                    <h3>Anything Else?</h3>
+                    <p>Additional context, questions, or anything else you'd like us to know before we review your application.</p>
+
+                    <div class="form-group">
+                        <label for="additionalContext">Additional Notes</label>
+                        <textarea id="additionalContext" name="additionalContext" placeholder="(Optional)"></textarea>
+                    </div>
+                </section>
+
+                <!-- AGREEMENT / CONSENT -->
+                <section class="form-section">
+                    <div class="form-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree">I agree to be contacted at the email/phone number provided, and I understand that this is an application for fit assessment, not a sales call. <span class="required">*</span></label>
+                        </div>
+                        <div class="error-message">You must agree to proceed</div>
+                    </div>
+
+                    <button type="submit" class="btn">Submit Application</button>
+                </section>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Embodied Man. All rights reserved.</p>
+            <p><a href="/">Back to homepage</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('applicationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        // ========================================
+        // FORM VALIDATION
+        // ========================================
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validateForm() {
+            let isValid = true;
+            const formGroups = form.querySelectorAll('.form-group');
+
+            formGroups.forEach(group => {
+                group.classList.remove('error');
+
+                const input = group.querySelector('input[required], textarea[required], select[required]');
+                if (!input) return;
+
+                const value = input.value.trim();
+
+                if (input.type === 'email') {
+                    if (!value || !validateEmail(value)) {
+                        group.classList.add('error');
+                        isValid = false;
+                    }
+                } else if (input.type === 'checkbox' && input.name === 'commitment') {
+                    const checked = form.querySelectorAll('input[name="commitment"]:checked');
+                    if (checked.length === 0) {
+                        group.classList.add('error');
+                        isValid = false;
+                    }
+                } else if (input.type === 'radio') {
+                    const checked = form.querySelector(`input[name="${input.name}"]:checked`);
+                    if (!checked) {
+                        group.classList.add('error');
+                        isValid = false;
+                    }
+                } else if (!value) {
+                    group.classList.add('error');
+                    isValid = false;
+                }
+            });
+
+            // Agreement checkbox
+            const agreeCheckbox = form.querySelector('#agree');
+            const agreeGroup = agreeCheckbox.closest('.form-group');
+            if (!agreeCheckbox.checked) {
+                agreeGroup.classList.add('error');
+                isValid = false;
+            } else {
+                agreeGroup.classList.remove('error');
+            }
+
+            return isValid;
+        }
+
+        // ========================================
+        // FORM SUBMISSION
+        // ========================================
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!validateForm()) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            // [TODO: INTEGRATE WITH YOUR EMAIL SERVICE OR BACKEND]
+            // Collect form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            data.submittedAt = new Date().toISOString();
+            data.commitment = Array.from(form.querySelectorAll('input[name="commitment"]:checked')).map(el => el.value);
+
+            console.log('Application Data:', data);
+
+            // [TODO: SEND TO EMAIL / API / WEBHOOK]
+            // Example: POST to your backend
+            // const response = await fetch('/api/applications', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // });
+
+            // Show success message
+            successMessage.classList.add('show');
+            form.reset();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // [TODO: OPTIONAL - Clear success message after delay]
+            // setTimeout(() => successMessage.classList.remove('show'), 5000);
+        });
+
+        // ========================================
+        // REAL-TIME VALIDATION
+        // ========================================
+
+        form.querySelectorAll('input[required], textarea[required], select[required]').forEach(field => {
+            field.addEventListener('blur', () => {
+                const group = field.closest('.form-group');
+                if (!group) return;
+
+                const value = field.value.trim();
+                if (field.type === 'email' && value && !validateEmail(value)) {
+                    group.classList.add('error');
+                } else if (value) {
+                    group.classList.remove('error');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
